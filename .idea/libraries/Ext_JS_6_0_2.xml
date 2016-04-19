@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Ext JS 6.0.2" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://D:/Sencha/SDK/ext-6.0.2" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://D:/Sencha/SDK/ext-6.0.2" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

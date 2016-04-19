@@ -8,7 +8,7 @@
 Ext.define('TabApp.view.main.Main', {
     extend: 'Ext.container.Viewport',
     xtype: 'app-main',
-
+    alias: 'main-view',
     requires: [
         'Ext.plugin.Viewport',
         'Ext.window.MessageBox',
@@ -22,7 +22,6 @@ Ext.define('TabApp.view.main.Main', {
 
     controller: 'main',
     viewModel: 'main',
-
     ui: 'navigation',
 
 
@@ -46,6 +45,12 @@ Ext.define('TabApp.view.main.Main', {
             layout: 'accordion',
             collapseDirection: 'left',
             title: 'Menu',
+            //listeners: {
+            //    itemclick: function() {
+            //     console.log("clicked");
+            //    }
+            //},
+        
             items: [
                 {
                     xtype: 'panel',
@@ -55,10 +60,20 @@ Ext.define('TabApp.view.main.Main', {
                             xtype: 'menu',
                             floating: false,
                             itemId: 'menu1',
+                            //listeners: {
+                            //    itemclick: function() {
+                            //    console.log("clicked");
+                            //}
+                            //},
                             items: [
                                 {
                                     xtype: 'menuitem',
                                     text: 'Menu Item'
+                                    //listeners: {
+                                    //    itemclick: function() {
+                                    //    console.log("clicked");
+                                    //}
+                                    //}
                                 },
                                 {
                                     xtype: 'menuitem',
@@ -125,11 +140,30 @@ Ext.define('TabApp.view.main.Main', {
             ]
         },
         {
-            xtype: 'panel',
-            flex: 1,
+            xtype: 'tabpanel',
+            title: 'Content',
             region: 'center',
+            reference: 'contentPanel',
             itemId: 'contentPanel',
-            title: 'Content'
+            id: 'mycontentpanel',
+            activeTab: 0,
+            items: [
+                {
+                    xtype: 'panel',
+                    itemId: 'tab1',
+                    title: 'Tab 1'
+                },
+                {
+                    xtype: 'panel',
+                    itemId: 'tab2',
+                    title: 'Tab 2'
+                },
+                {
+                    xtype: 'panel',
+                    itemId: 'tab3',
+                    title: 'Tab 3'
+                }
+            ]
         }
     ]
 });
