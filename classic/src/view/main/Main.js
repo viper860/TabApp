@@ -150,18 +150,8 @@ Ext.define('TabApp.view.main.Main', {
             items: [
                 {
                     xtype: 'panel',
-                    itemId: 'tab1',
-                    title: 'Tab 1'
-                },
-                {
-                    xtype: 'panel',
-                    itemId: 'tab2',
-                    title: 'Tab 2'
-                },
-                {
-                    xtype: 'panel',
-                    itemId: 'tab3',
-                    title: 'Tab 3'
+                    itemId: 'home',
+                    title: 'Home'
                 }
             ]
         }

@@ -49,9 +49,10 @@ Ext.define('TabApp.view.main.MainController', {
         console.log(this.lookupReference("contentPanel"));
 
         var tabmenu = this.lookupReference("contentPanel");
+        var count = tabmenu.items.getCount();
         var tab = tabmenu.add({
             title: rowmodel.text,
-            id: 'tab'+rowmodel.id,
+            id: 'tab_'+rowmodel.id+"_"+count,
             closable: true,
             autoScroll: true,
             layout: 'fit'
