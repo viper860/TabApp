@@ -35,23 +35,24 @@ Ext.define('TabApp.view.main.MainController', {
         }
     },
     onMenuItemClick: function(rowmodel, record, index, eOpts) {
-        console.log(rowmodel);
+        //console.log(rowmodel);
         //console.log(record);
-                console.log(rowmodel.text);
+        //console.log(rowmodel.text);
         //var tabmenu = Ext.getCmp("contentPanel");
-       //console.log(tabmenu);
-        console.log(this);
+        //console.log(tabmenu);
+        //console.log(this);
 
-        console.log(this.tabmenu);
-       // console.log(this.getTabMenu());
+        //console.log(this.tabmenu);
+        //console.log(this.getTabMenu());
 
-//        console.log(this.getMainContent());
-        console.log(this.lookupReference("contentPanel"));
+        //console.log(this.getMainContent());
+        //console.log(this.lookupReference("contentPanel"));
 
         var tabmenu = this.lookupReference("contentPanel");
         var count = tabmenu.items.getCount();
         var tab = tabmenu.add({
             title: rowmodel.text,
+            xtype: 'mainlist',
             id: 'tab_'+rowmodel.id+"_"+count,
             closable: true,
             autoScroll: true,
